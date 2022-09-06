@@ -5,7 +5,7 @@ var room = HBInit({
 	noPlayer: true // Remove host player (recommended!)
 });
 
-var adminPassword = "!password";//write your admin password inside the quotes
+var adminPassword = "!password"; //write your admin password inside the quotes
 
 room.onPlayerChat = function(player, message) {
 if (message == adminPassword) {
