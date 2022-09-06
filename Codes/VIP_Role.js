@@ -1,7 +1,7 @@
 var room = HBInit({
 	roomName: "My room",
 	maxPlayers: 16,
-  public: false,
+        public: false,
 	noPlayer: true // Remove host player (recommended!)
 });
 
