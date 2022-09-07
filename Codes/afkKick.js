@@ -13,7 +13,7 @@ setInterval(() => {
 		if (players[i].position != null && alfaTest == false && kickOff == true) {
 			playersAfk[players[i].name]++;
 			if(playersAfk[players[i].name] == 4)
-			room.sendAnnouncement("❌ Hey " + players[i].name + ", Eğer Önümüzdeki '6' Saniye İçinde Hareket Etmezsen Kick'lenirsiniz!", players[i].id, "0xf54c55", "normal", 2);
+			room.sendAnnouncement("❌ Hey " + players[i].name + ", If you do not move within '6' seconds, you will be kicked!", players[i].id, "0xf54c55", "normal", 2);
 			else if(playersAfk[players[i].name] == 10)
 			room.kickPlayer(players[i].id, "💤 𝐀𝐅𝐊.", false);
 		}
