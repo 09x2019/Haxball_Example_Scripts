@@ -1,14 +1,14 @@
-var tamDagitilabilir = false;
+var distributable = false;
 
-function hesapla(sayi){ 
+function calculate(number){ 
  
 //Is the remainder 0 after dividing the number by 2?
-if(sayi%2==0) {
+if(number%2 == 0) {
 console.log("Number double!");
-tamDagitilabilir = true;
+distributable = true;
 }
 else { 
 console.log("Number single!");
-tamDagitilabilir = false;
+distributable = false;
 }
 }
