@@ -1,4 +1,4 @@
-var room = HBInit({ roomName: "My room", maxPlayers: 16, public: false, noPlayer: true });
+var room = HBInit({ roomName: "VIP Role", maxPlayers: 16, public: false, noPlayer: true });
 
 //style[number] 0 normal - 1 bold - 2 italic - 3 small - 4 small-bold - 5 small-italic
 //sounds[number] 0 - 1 - 2
