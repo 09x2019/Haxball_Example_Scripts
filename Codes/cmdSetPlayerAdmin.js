@@ -1,4 +1,4 @@
-var room = HBInit({ roomName: "My room", maxPlayers: 16, public: false, noPlayer: true });
+var room = HBInit({ roomName: "Command SetPlayerAdmin", maxPlayers: 16, public: false, noPlayer: true });
 
 var adminPassword = "!password"; //write your admin password inside the quotes
 
