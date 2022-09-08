@@ -1,4 +1,4 @@
-var room = HBInit({ roomName: "My room", maxPlayers: 16, public: false, noPlayer: true });
+var room = HBInit({ roomName: "Afk Kick", maxPlayers: 16, public: false, noPlayer: true });
 
 var playersAfk = {};
 
