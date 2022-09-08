@@ -1,3 +1,5 @@
+var room = HBInit({ roomName: "Number Single Or Double Control", maxPlayers: 16, public: false, noPlayer: true });
+
 var distributable = false;
 
 function calculate(number){ 
