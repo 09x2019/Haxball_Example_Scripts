@@ -1,4 +1,4 @@
-var room = HBInit({ roomName: "My room", maxPlayers: 16, public: false, noPlayer: true });
+var room = HBInit({ roomName: "2 Tab Hurdle", maxPlayers: 16, public: false, noPlayer: true });
 
 var PlayerAuth = {};
 
