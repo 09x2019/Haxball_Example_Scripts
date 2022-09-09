@@ -20,10 +20,10 @@ room.onPlayerChat = function(player, message) {
     }
     
     if (message == "!streak") {
-        if (SETTINGS.General.redStreak >= SETTINGS.General.blueStreak) {
+        if (redStreak >= blueStreak) {
             room.sendAnnouncement(SETTINGS.Message.redStreak, player.id, 0x660099, 'bold', 2);
         } else {
-            if (SETTINGS.General.blueStreak > SETTINGS.General.redStreak) {
+            if (blueStreak > redStreak) {
                 room.sendAnnouncement(SETTINGS.Message.blueStreak, player.id, 0x660099, 'bold', 2);
             }
         }
