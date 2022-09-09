@@ -1,3 +1,5 @@
+var room = HBInit({ roomName: "High Streak And Streak System", noPlayer: true, public: true, maxPlayers: 16 });
+
 var SETTINGS = {
     Message: {
         redStreak: "The red team has won " + SETTINGS.General.redStreak + " games in a row.",
