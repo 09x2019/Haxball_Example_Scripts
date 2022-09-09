@@ -2,16 +2,16 @@ var SETTINGS = {
     Message: {
         redStreak: "The red team has won " + SETTINGS.General.redStreak + " games in a row.",
         blueStreak: "The blue team has won " + SETTINGS.General.blueStreak + " games in a row.",
-        highStreak: "The " + highStreakTeam + " team holds the highStreak with " + SETTINGS.General.highStreak + " straight win."
+        highStreak: "The " + SETTINGS.General.highStreakTeam + " team holds the highStreak with " + SETTINGS.General.highStreak + " straight win."
     },
     General: {
         redStreak: 0,
         blueStreak: 0,
         highStreak: 0,
-        teamRedHighStreak: false
-}
-
-var highStreakTeam = SETTINGS.General.teamRedHighStreak == true ? "red" : "blue";
+        teamRedHighStreak: false,
+        highStreakTeam: SETTINGS.General.teamRedHighStreak == true ? "red" : "blue"
+    },
+};
 
 room.onPlayerChat = function(player, message) {
     if (message == "!highstreak") {
