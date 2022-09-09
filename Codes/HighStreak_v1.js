@@ -1,17 +1,16 @@
 var room = HBInit({ roomName: "High Streak And Streak System", noPlayer: true, public: true, maxPlayers: 16 });
 
+var redStreak = 0;
+var blueStreak = 0;
+var highStreak = 0;
+var teamRedHighStreak = false;
+var highStreakTeam = teamRedHighStreak == true ? "red" : "blue";
+
 var SETTINGS = {
     Message: {
-        redStreak: "The red team has won " + SETTINGS.General.redStreak + " games in a row.",
-        blueStreak: "The blue team has won " + SETTINGS.General.blueStreak + " games in a row.",
-        highStreak: "The " + SETTINGS.General.highStreakTeam + " team holds the highStreak with " + SETTINGS.General.highStreak + " straight win."
-    },
-    General: {
-        redStreak: 0,
-        blueStreak: 0,
-        highStreak: 0,
-        teamRedHighStreak: false,
-        highStreakTeam: SETTINGS.General.teamRedHighStreak == true ? "red" : "blue"
+        redStreak: "The red team has won " + redStreak + " games in a row.",
+        blueStreak: "The blue team has won " + blueStreak + " games in a row.",
+        highStreak: "The " + highStreakTeam + " team holds the highStreak with " + highStreak + " straight win."
     },
 };
 
@@ -33,21 +32,21 @@ room.onPlayerChat = function(player, message) {
 
 room.onTeamVictory = function(player, scores) {
     if (scores.red > scores.blue) {
-        SETTINGS.General.blueStreak = 0;
-        SETTINGS.General.redStreak++;
+        blueStreak = 0;
+        redStreak++;
     } else {
         if (scores.blue > scores.red) {
-            SETTINGS.General.redStreak = 0;
-            SETTINGS.General.blueStreak++;
+            redStreak = 0;
+            blueStreak++;
         }
     }
-    if (SETTINGS.General.redStreak > SETTINGS.General.highStreak) {
-        SETTINGS.General.highStreak = SETTINGS.General.redStreak;
-        SETTINGS.General.teamRedHighStreak = true;
+    if (redStreak > highStreak) {
+        highStreak = redStreak;
+        teamRedHighStreak = true;
     } else {
-        if (SETTINGS.General.blueStreak > SETTINGS.General.highStreak) {
-            SETTINGS.General.highStreak = SETTINGS.General.blueStreak;
-            SETTINGS.General.teamRedHighStreak = false;
+        if (blueStreak > highStreak) {
+            highStreak = blueStreak;
+            teamRedHighStreak = false;
         }
     }
 }
